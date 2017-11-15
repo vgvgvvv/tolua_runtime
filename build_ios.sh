@@ -46,5 +46,5 @@ cd ../iOS
 $LIPO -create "$DESTDIR"/libluajit-*.a -output "$DESTDIR"/libluajit.a
 $STRIP -S "$DESTDIR"/libluajit.a
 xcodebuild clean
-xcodebuild -configuration=Release
-cp -f ./build/Release-iphoneos/libtolua.a ../Plugins/iOS/
+xcodebuild -configuration=Debug
+cp -f ./build/Debug-iphoneos/libtolua.a ../Plugins/iOS/

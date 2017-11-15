@@ -39,17 +39,17 @@
 #define TOLUA_NOPEER    	LUA_REGISTRYINDEX 		
 #define FLAG_INDEX_ERROR 	1
 #define FLAG_INT64       	2
-#define FLAG_UINT64			4
 
 #define MAX_ITEM 512
 
 #define abs_index(L, i)  ((i) > 0 || (i) <= LUA_REGISTRYINDEX ? (i) : lua_gettop(L) + (i) + 1)
 
-void tolua_openint64(lua_State* L);
-int  tolua_newint64(lua_State* L);
+void toluas_openint64(lua_State* L);
+int  toluas_newint64(lua_State* L);
+void toluas_pushint64(lua_State* L, int64_t n);
 
-void tolua_openuint64(lua_State* L);
-int  tolua_newuint64(lua_State* L);
+void toluas_openuint64(lua_State* L);
+int  toluas_newuint64(lua_State* L);
 
 extern int toluaflags;
 
